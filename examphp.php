@@ -20,7 +20,6 @@
 class ArrayManager {
 
     // tableau par défault
-    const DEFAULT_ARRAY=[80,60,95,15,45,78,65,32,120,8,2,110];
     private $nbStronger;
     private $array;
 
@@ -49,6 +48,7 @@ class ArrayManager {
     }
     //méthode pour recevoir de l'extèrieure un tableau de nombre pour remplacer le tableau par défault
     public function setArray(array $array){
+
         $this->array=$array;
     }
 }
