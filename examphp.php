@@ -32,8 +32,8 @@ class ArrayManager {
     public function findStrongerNumber(){
         if(empty($this->array)){
             return;
-        }else{
-            $this->nbStronger=$this->array[0];
+        }
+        $this->nbStronger=$this->array[0];
         for ($i=0; $i<count($this->array); $i++) { 
             
             $nbCourant=$this->array[$i];
@@ -43,7 +43,6 @@ class ArrayManager {
             // var_dump($i);
         }
         return $this->nbStronger;
-        }
     }
     //méthode pour renvoyer a l'extèrieure de la classe le nombre le plus grand
     public function getNbStronger(){
