@@ -25,10 +25,10 @@ class ArrayManager {
     private $array;
 
     //méthode magique du constructeur
-    public function __construct(){
-        $this->nbStronger = 0;
-        $this->array=self::DEFAULT_ARRAY;
-        
+    public function __construct($array){
+        $this->nbStronger;
+        $this->array=$array;
+        $this->findStrongerNumber();
     }
 
     //méthode pour trouver le plus grand nombre
