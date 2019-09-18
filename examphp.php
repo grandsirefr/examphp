@@ -25,32 +25,32 @@ class ArrayManager {
 
     //méthode magique du constructeur
     public function __construct($array){
-        $this->array=$array;
+        $this->array = $array;
     }
 
     //méthode pour trouver le plus grand nombre
     public function findStrongerNumber(){
-        if(empty($this->array)){
+        if(empty($this ->array)){
             return;
         }
-        $this->nbStronger=$this->array[0];
-        for ($i=0; $i<count($this->array); $i++) { 
+        $this ->nbStronger = $this ->array[0];
+        for ($i = 0; $i < count($this->array) ; $i ++) { 
             
-            $nbCourant=$this->array[$i];
-            if ($nbCourant>$this->nbStronger) {
-                $this->nbStronger=$nbCourant;    
+            $nbCourant = $this -> array[$i];
+            if ($nbCourant > $this ->nbStronger) {
+                $this ->nbStronger = $nbCourant;    
             }
             // var_dump($i);
         }
-        return $this->nbStronger;
+        return $this ->nbStronger;
     }
     //méthode pour renvoyer a l'extèrieure de la classe le nombre le plus grand
     public function getNbStronger(){
-        return $this->nbStronger;
+        return $this ->nbStronger;
     }
     //méthode pour recevoir de l'extèrieure un tableau de nombre pour remplacer le tableau par défault
     public function setArray(array $array){
 
-        $this->array=$array;
+        $this ->array=$array;
     }
 }
