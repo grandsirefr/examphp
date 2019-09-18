@@ -20,15 +20,14 @@
 class ArrayManager {
 
     // tableau par défault
-    const DEFAULT_ARRAY=[80,60,95,15,45,78,65,32,120,8,2,110];
     private $nbStronger;
     private $array;
 
     //méthode magique du constructeur
-    public function __construct(){
-        $this->nbStronger = 0;
-        $this->array=self::DEFAULT_ARRAY;
-        
+    public function __construct($array){
+        $this->nbStronger;
+        $this->array=$array;
+        $this->findStrongerNumber();
     }
 
     //méthode pour trouver le plus grand nombre
@@ -49,6 +48,7 @@ class ArrayManager {
     }
     //méthode pour recevoir de l'extèrieure un tableau de nombre pour remplacer le tableau par défault
     public function setArray(array $array){
+
         $this->array=$array;
     }
 }
