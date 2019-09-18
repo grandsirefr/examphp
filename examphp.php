@@ -25,15 +25,17 @@ class ArrayManager {
 
     //méthode magique du constructeur
     public function __construct($array){
-        $this->nbStronger;
         $this->array=$array;
-        $this->findStrongerNumber();
     }
 
     //méthode pour trouver le plus grand nombre
     public function findStrongerNumber(){
+        if(empty($this->array)){
+            return;
+        }else{
+            $this->nbStronger=$this->array[0];
         for ($i=0; $i<count($this->array); $i++) { 
-
+            
             $nbCourant=$this->array[$i];
             if ($nbCourant>$this->nbStronger) {
                 $this->nbStronger=$nbCourant;    
@@ -41,6 +43,7 @@ class ArrayManager {
             // var_dump($i);
         }
         return $this->nbStronger;
+        }
     }
     //méthode pour renvoyer a l'extèrieure de la classe le nombre le plus grand
     public function getNbStronger(){
